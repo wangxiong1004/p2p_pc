@@ -8,3 +8,6 @@
 ### plugins -- npm i <plugin-name> -D
     - gulp
     -
+
+### 添加版本号
+(https://www.jianshu.com/p/934ca1a5f189)[https://www.jianshu.com/p/934ca1a5f189]
