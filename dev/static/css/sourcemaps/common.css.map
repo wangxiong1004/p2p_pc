@@ -1,0 +1,1 @@
+{"version":3,"sources":["common.scss"],"names":[],"mappings":"AAAA;EACI,gBAAe;EACf,oBAAmB;CACtB","file":"../common.css","sourcesContent":["h3 {\r\n    font-size: 12px;\r\n    font-weight: normal;\r\n}\r\n"]}
