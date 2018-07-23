@@ -4,7 +4,7 @@ var pump = require('pump');
 var runSequence = require('run-sequence');
 var del = require('del');
 var browser = require('browser-sync');
-const reload = browser.reload;
+var reload = browser.reload;
 
 var pathConfig = require('./config/path_config');
 var pluginConfig = require('./config/plugin_config');
@@ -76,8 +76,104 @@ gulp.task('sass_build', function() {
         plugins.rev(),
         gulp.dest(pathConfig.sass_dest_build),
         plugins.rev.manifest('rev-css-mainfest.json'),
-        gulp.dest('./build/rev')
+        gulp.dest(pathConfig.rev_build)
    ]);
+});
+
+// images
+/*
+ * 图片转移到/dev
+ */
+gulp.task('images_dev', function() {
+   return pump([
+       gulp.src(pathConfig.images_src_dev),
+       plugins.changed('./dev/static/images'),
+       gulp.dest(pathConfig.images_dest_dev),
+       reload({stream: true})
+   ]);
+});
+
+gulp.task('images_build', ['images_dev'], function() {
+    return pump([
+        gulp.src(pathConfig.images_src_build),
+        plugins.cache(plugins.imagemin(pluginConfig.imagemin)),
+        gulp.dest(pathConfig.images_dest_build)
+    ]);
+});
+
+// js
+/*
+ * js转移到/dev
+ * jssourcemap
+ * eslint规则校验
+ * es6转es5
+ */
+gulp.task('js_dev', function() {
+    return pump([
+        gulp.src(pathConfig.js_src_dev),
+        plugins.sourcemaps.init(),
+//      plugins.eslint(),
+//      plugins.eslint.format(),
+        plugins.changed('./dev/js'),
+//      plugins.babel({
+//          presets: ['es2015', 'stage-1']
+//      }),
+        plugins.sourcemaps.write('./sourcemaps'),
+        gulp.dest(pathConfig.js_dest_dev),
+        reload({stream: true})
+    ]);
+});
+
+/*
+ * js压缩
+ */
+gulp.task('js_build', function() {
+    return pump([
+        gulp.src(pathConfig.js_src_build),
+        plugins.uglify(),   // pluginConfig.uglify
+        plugins.rev(),
+        plugins.assetRev(),
+        gulp.dest(pathConfig.js_dest_build),
+        plugins.rev.manifest('rev-js-manifest.json'),
+        gulp.dest(pathConfig.rev_build)
+    ]);
+});
+
+// libs
+/*
+ * 转移插件
+ */
+gulp.task('libs_dev', function() {
+    return pump([
+        gulp.src('./src/static/libs/**/*'),
+        gulp.dest('./dev/static/libs')
+    ]);
+});
+
+gulp.task('libs_build', function() {
+    return pump([
+        gulp.src('./dev/static/libs/**/*'),
+        gulp.dest('./build/static/libs')
+    ]);
+});
+
+// json
+/*
+ * 转移数据
+ */
+gulp.task('json_dev', function() {
+    return pump([
+        gulp.src('./src/_data/**/*.json'),
+        gulp.dest('./dev/_data'),
+        reload({stream: true})
+    ]);
+});
+
+gulp.task('json_build', function() {
+    return pump([
+        gulp.src('./dev/_data/**/*.json'),
+        gulp.dest('./build/_data')
+    ]);
 });
 
 // clean
@@ -97,8 +193,8 @@ gulp.task('clean_build', function(cb) {
 gulp.task('dev', function() {
     // [] 中任务是并行的，其他按照先后顺序执行
     runSequence('clean_dev', 'html_dev', [
-        'sass_dev'
-    ]);
+        'sass_dev', 'js_dev', 'libs_dev'
+    ], 'images_dev', 'json_dev');
 });
 
 /*
@@ -116,7 +212,10 @@ gulp.task('run', function() {
     });
 
     gulp.watch('./src/static/sass/**/*.scss', ['sass_dev']);
-    gulp.watch('./src/**/*.html').on('change', reload);
+    gulp.watch('./src/static/js/**/*.js', ['js_dev']);
+    gulp.watch('./src/static/images/**/*.{png,jpg,gif,ico,jpeg}', ['images_dev']);
+    gulp.watch('./src/_data/**/*.json', ['json_dev']);
+    gulp.watch('./src/**/*.html', ['html_dev']).on('change', reload);
 });
 
 /*
@@ -125,9 +224,9 @@ gulp.task('run', function() {
 */
 gulp.task('build', function(cb) {
     runSequence('clean_build', 'html_build', [
-        'sass_build'
-    ], 'html_path', cb)
-})
+        'sass_build', 'js_build', 'libs_build'
+    ], 'html_path', 'images_build', 'json_build', cb)
+});
 
 /*
  * 生产测试
@@ -141,4 +240,4 @@ gulp.task('build-test', function() {
         open: 'external',
         port: 3000
     });
-})
+});

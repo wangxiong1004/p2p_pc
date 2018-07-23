@@ -1,6 +1,74 @@
-h3 {
-  font-size: 12px;
-  font-weight: normal;
+@charset "UTF-8";
+body {
+  line-height: 1;
+  font-family: "微软雅黑";
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.dl__container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.c-btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 44px;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: inherit;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  transition-property: all;
+  transition-duration: .3s;
+}
+
+.c-btn--origin {
+  color: #f60;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+
+.c-btn--gray {
+  color: #ccc;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+
+.c-btn--small {
+  padding: 0 30px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.c-btn--rounded {
+  border-radius: 3px;
+}
+
+.c-btn--pill {
+  border-radius: 200px;
 }
 
 /*# sourceMappingURL=sourcemaps/common.css.map */

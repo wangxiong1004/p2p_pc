@@ -1,21 +1,87 @@
-body {
-  background: #fff;
+.contact-methods__block .contact-method {
+  float: left;
 }
 
-html {
-  line-height: 1;
-  box-shadow: 1px 1px 1px #ccc;
-  -webkit-transform: translate(20px);
-      -ms-transform: translate(20px);
-          transform: translate(20px);
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.contact-methods__block .contact-method .contact-icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/icon/icon.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
-body {
-  border: 5px solid #1dd;
-  padding: 50px 100px;
+.contact-methods__block .contact-method .contact-icon.contact-micro_blog {
+  background-position: -6px -4px;
+}
+
+.contact-methods__block .contact-method .contact-icon.contact-wechat {
+  background-position: -6px -181px;
+}
+
+.contact-methods__block .contact-method .contact-icon.contact-custom_service {
+  background-position: -6px -269px;
+}
+
+.dl__footer {
+  padding: 58px 0 51px 0;
+  background: #303032;
+}
+
+.dl__footer .footer-top .nav-tit {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.dl__footer .footer-top .quick-navs {
+  float: left;
+}
+
+.dl__footer .footer-top .quick-navs .quick-nav {
+  float: left;
+  margin-right: 130px;
+}
+
+.dl__footer .footer-top .quick-navs .quick-nav dd {
+  margin-bottom: 10px;
+}
+
+.dl__footer .footer-top .quick-navs .quick-nav dd > a {
+  font-size: 12px;
+  color: #e5e5e5;
+}
+
+.dl__footer .footer-top .access-navs {
+  float: left;
+  margin-left: 15px;
+}
+
+.dl__footer .footer-top .access-navs .access-nav {
+  float: left;
+  margin-right: 136px;
+}
+
+.dl__footer .footer-top .access-navs .access-nav dd > img {
+  width: 84px;
+  height: 84px;
+}
+
+.dl__footer .footer-top .contact-navs {
+  float: right;
+  text-align: center;
+}
+
+.dl__footer .footer-top .contact-navs .contact-nav .contact-tel {
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #bdbdbd;
+}
+
+.dl__footer .footer-top .contact-navs .contact-nav .contact-time {
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #bdbdbd;
 }
 
 /*# sourceMappingURL=sourcemaps/index.css.map */

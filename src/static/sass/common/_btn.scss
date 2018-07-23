@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+.c-btn {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 44px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: inherit;
+    text-decoration: none;
+    text-align: center;
+    color: $black;
+    background-color: transparent;
+    border: 1px solid $black;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+    transition-property: all;
+    transition-duration: .3s;
+}
+
+// 按钮颜色 -- color
+@mixin btnColor($fzColor: $white, $bgColor: #ccc) {
+    color: $fzColor;
+    background-color: $bgColor;
+    border-color: $bgColor;
+}
+
+.c-btn--origin {
+    @include btnColor($origin);
+}
+
+.c-btn--gray {
+    @include btnColor($gray);
+}
+
+// 按钮大小 --size
+.c-btn--small {
+    padding: 0 30px;
+    height: 32px;
+    line-height: 32px;
+}
+
+// 按钮圆角 -- rounded
+.c-btn--rounded {
+    border-radius: 3px;
+}
+
+.c-btn--pill {
+    border-radius: 200px;
+}

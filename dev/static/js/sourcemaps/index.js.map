@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["index.js"],"sourcesContent":["\r\nlayui.define(['layer', 'api', 'srbank'], function (exports) {\r\n    var layer = layui.layer;\r\n    var api = layui.api;\r\n    var srbank = layui.srbank;\r\n\r\n    console.log(api.index());\r\n    console.log(srbank.openSRBank());\r\n\r\n    exports('index', {});\r\n});"],"file":"../index.js"}

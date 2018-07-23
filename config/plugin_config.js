@@ -37,5 +37,14 @@ module.exports = {
     },
     rename: {
         suffix: '.min'
+    },
+    imagemin: {
+        progressive: true,
+        optimizationLevel: 5
+    },
+    uglify: {
+        mangle: {
+            except: ['require', 'exports', 'module', '$']
+        }
     }
 };

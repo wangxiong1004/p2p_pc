@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>index</title>
+        @@include('./views/include/meta.html')
+		<title>【多啦聚财官网】消费金融理财平台_消费理财金融公司</title>
+		<link rel="stylesheet" type="text/css" href="./static/libs/layui/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="./static/css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="./static/css/index.css"/>
 	</head>
 	<body>
 	    @@include('./views/include/header.html')
+
+<img src="static/images/code_84.png" alt="关注公众号: 多啦聚财">
+
+        @@include('./views/include/footer.html')
+        <script src="./static/libs/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        	layui.config({
+        	    base: './static/js/modules/'
+        	}).extend({
+        	    srbank: 'api/srbank',
+        	    index: '{/}./static/js/index'
+        	}).use('index');
+        </script>
 	</body>
 </html>

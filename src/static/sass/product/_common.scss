@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+// footer
+// 联系方式
+.contact-methods__block {
+    .contact-method {
+        float: left;
+        .contact-icon {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background-image: url('../images/icon/icon.png');
+            background-repeat: no-repeat;
+            cursor: pointer;
+            &.contact-micro_blog {
+                background-position: -6px -4px;
+            }
+            &.contact-wechat {
+                background-position: -6px -181px;
+            }
+            &.contact-custom_service {
+                background-position: -6px -269px;
+            }
+        }
+    }
+}
+
+// 网站底部 -- footer
+.dl__footer {
+    padding: 58px 0 51px 0;
+    background: #303032;
+    .footer-top {
+        .nav-tit {
+            font-size: 16px;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        .quick-navs {
+            float: left;
+            .quick-nav {
+                float: left;
+                margin-right: 130px;
+                dd {
+                    margin-bottom: 10px;
+                    & >a {
+                        font-size: 12px;
+                        color: #e5e5e5;
+                    }
+                }
+            }
+        }
+        .access-navs {
+            float: left;
+            margin-left: 15px;
+            .access-nav {
+                float: left;
+                margin-right: 136px;
+                dd {
+                    & > img {
+                        width: 84px;
+                        height: 84px;
+                    }
+                }
+            }
+        }
+        .contact-navs {
+            float: right;
+            text-align: center;
+            .contact-nav {
+                .contact-tel {
+                    margin-bottom: 10px;
+                    font-size: 26px;
+                    color: #bdbdbd;
+                }
+                .contact-time {
+                    margin-bottom: 15px;
+                    font-size: 12px;
+                    color: #bdbdbd;
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        .friendship-link {}
+        .copyright {
+            .copyright-text {}
+            .copyright-certificate {}
+        }
+    }
+}
+

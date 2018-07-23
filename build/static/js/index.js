@@ -1,0 +1,1 @@
+"use strict";console.log("index.js -- sourcemap");var NUM=10,a=100;

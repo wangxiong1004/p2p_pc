@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["modules/api/srbank.js"],"sourcesContent":["layui.define(function(exports) {\r\n    exports('srbank', {\r\n        openSRBank: function() {\r\n            return 'open srbank';\r\n        }\r\n    });\r\n});"],"file":"../../../modules/api/srbank.js"}
