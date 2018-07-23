@@ -96,7 +96,7 @@ gulp.task('images_dev', function() {
 gulp.task('images_build', ['images_dev'], function() {
     return pump([
         gulp.src(pathConfig.images_src_build),
-        plugins.cache(plugins.imagemin(pluginConfig.imagemin)),
+        plugins.cache(plugins.imagemin()),
         gulp.dest(pathConfig.images_dest_build)
     ]);
 });

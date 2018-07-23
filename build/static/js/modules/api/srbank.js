@@ -1,0 +1,1 @@
+layui.define(function(n){n("srbank",{openSRBank:function(){return"open srbank"}})});

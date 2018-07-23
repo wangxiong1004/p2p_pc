@@ -1,0 +1,1 @@
+layui.define(["layer"],function(i){layui.layer;i("api",{index:function(){return"index Data"}})});

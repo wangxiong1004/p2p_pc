@@ -4,6 +4,10 @@ body {
   font-family: "微软雅黑";
 }
 
+strong {
+  font-weight: normal;
+}
+
 .clearfix {
   *zoom: 1;
 }
