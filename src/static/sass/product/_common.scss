@@ -477,3 +477,96 @@
     }
 }
 
+// 侧边栏导航
+.aside__bar {
+    position: fixed;
+    z-index: 100001;
+    right: 0;
+    bottom: 10px;
+    .aside-lists {
+        .aside-item {
+            position: relative;
+            width: 34px;
+            height: 34px;
+            margin-bottom: 2px;
+            text-align: center;
+            border-radius: 3px;
+            .aside-link {
+                .aside-icon {
+                    display: inline-block;
+                    width: 34px;
+                    height: 34px;
+                    margin-left: 1px;
+                    position: relative;
+                    z-index: 2;
+                    border-radius: 3px;
+                    background-color: #bcbcbc;
+                    background-image: url(../images/icon/icon.png);
+                    background-repeat: no-repeat;
+                }
+                .aside-text {
+                    width: 62px;
+                    height: 34px;
+                    line-height: 34px;
+                    font-size: 12px;
+                    color: #fff;
+                    text-align: center;
+                    font-family: 微软雅黑;
+                    position: absolute;
+                    z-index: 1;
+                    left: 34px;
+                    top: 0;
+                    background-color: #bcbcbc;
+                    border-radius: 3px 0 0 3px;
+                    transition: left .3s ease-in-out .1s;
+                }
+            }
+            &.aside-item01 {
+                .aside-link {
+                    .aside-icon {
+                        background-position: -772px -469px;
+                    }
+                }
+            }
+            &.aside-item02 {
+                .aside-link {
+                    .aside-icon {
+                        background-position: -771px -321px;
+                    }
+                }
+            }
+            &.aside-item03 {
+                .aside-link {
+                    .aside-icon {
+                        background-position: -769px -377px;
+                    }
+                }
+            }
+            &.aside-item04 {
+                .aside-link {
+                    .aside-icon {
+                        background-position: -770px -404px;
+                    }
+                }
+            }
+            &.aside-item05 {
+                display: none;
+                .aside-link {
+                    .aside-icon {
+                        background-position: -769px -443px;
+                    }
+                }
+            }
+            &.aside-item-hover {
+                .aside-link {
+                    .aside-icon {
+                        background-color: #f60;
+                    }
+                    .aside-text {
+                        background-color: #f60;
+                    }
+                }
+            }
+        }
+    }
+}

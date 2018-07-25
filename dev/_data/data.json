@@ -1,9 +1,0 @@
-{
-    "code": 0,
-    "msg": "success",
-    "data": {
-        "_id": 1,
-        "count": 10,
-        "price": 100
-    }
-}

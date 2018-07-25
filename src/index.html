@@ -14,16 +14,21 @@
         <!-- 网站底部 -->
         @@include('./views/include/footer.html')
 
-        <script src="./static/libs/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+        <!-- 侧边栏导航 -->
+        @@include('./views/include/aside_bar.html')
 
+
+        @@include('./views/include/script.html')
+        <script src="/static/js/product/home.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
-        	layui.config({
-        	    base: './static/js/modules/'
-        	}).extend({
-        	    srbank: 'api/srbank',
-        	    index: '{/}./static/js/index'
-        	}).use('index');
+//      	layui.config({
+//      	    base: './static/js/modules/'
+//      	}).extend({
+//      	    srbank: 'api/srbank',
+//      	    index: '{/}./static/js/index'
+//      	}).use('index');
 
+//          layui.use('home');
         </script>
 	</body>
 </html>

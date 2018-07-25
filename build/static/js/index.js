@@ -1,1 +1,0 @@
-layui.define(["layer","api","srbank"],function(a){layui.layer;var n=layui.api,i=layui.srbank;console.log(n.index()),console.log(i.openSRBank()),a("index",{})});

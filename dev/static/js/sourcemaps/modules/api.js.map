@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["modules/api.js"],"sourcesContent":["layui.define(['layer'], function(exports) {\r\n    var layer = layui.layer;\r\n\r\n    exports('api', {\r\n        index: function() {\r\n            return 'index Data'\r\n        }\r\n    });\r\n\r\n});"],"file":"../../modules/api.js"}

@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+// clearfix
 @mixin clr() {
     *zoom: 1;
     &:before,
@@ -9,5 +10,25 @@
     }
     &:after {
         clear: both;
+    }
+}
+
+// placeholder
+@mixin placeholder($color: #ccc, $fontsize: 14px) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        font-size: $fontsize;
+    }
+    &:-ms-input-placeholder { // IE10+
+        color: $color;
+        font-size: $fontsize;
+    }
+    &:-moz-placeholder { // Firefox4-18
+        color: $color;
+        font-size: $fontsize;
+    }
+    &::-moz-placeholder { // Firefox19+
+        color: $color;
+        font-size: $fontsize;
     }
 }
