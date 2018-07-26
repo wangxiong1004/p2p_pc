@@ -215,7 +215,7 @@ gulp.task('run', function() {
     gulp.watch('./src/static/js/**/*.js', ['js_dev']);
     gulp.watch('./src/static/images/**/*.{png,jpg,gif,ico,jpeg}', ['images_dev']);
     gulp.watch('./src/_data/**/*.json', ['json_dev']);
-    gulp.watch('./src/**/*.html', ['html_dev']).on('change', reload);
+    gulp.watch(['./src/**/*.html', './src/views/*.html'], ['html_dev']).on('change', reload);
 });
 
 /*

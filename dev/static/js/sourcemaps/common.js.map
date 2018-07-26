@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["common.js"],"sourcesContent":["layui.use(['code', 'element'], function () {\r\n    layui.code();\r\n    var element = layui.element;\r\n});\r\n"],"file":"../common.js"}

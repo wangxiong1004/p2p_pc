@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+<meta name="keywords" content="消费金融,佰仟金融,多啦聚财官网,深圳消费金融,网络借贷信息中介平台,消费金融公司">
+<meta name="description" content="多啦聚财官网-(https://www.dolabank.com 多啦客服电话: 400-9300-986.订阅号:多啦聚财）专注于互联网消费金融投资咨询服务，以海量消费分期项目，风险可控，为投资者提供优质的网络借贷信息中介服务。">
+<meta name="renderer" content="webkit">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="baidu-site-verification" content="2qgzp38cdY">
+
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/libs/layui/css/layui.css" />
+<link rel="stylesheet" href="/static/css/index.css">
+	<style>
+		.border {
+			min-height: 400px;
+			border: 1px solid #009688;
+		}
+
+	</style>
+</head>
+
+<body>
+    <div class="layui-container">
+        <h1>flex布局</h1>
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">result</li>
+                <li>html</li>
+                <li>css</li>
+                <li>需求</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <div class="layout-between">
+                        <span class="layout-item layout-left">平台品牌战略规划升级，正式更名多啦聚财</span>
+                        <span class="layout-item layout-right">2017-05-08</span>
+                    </div>
+                    <div class="layout-between">
+                        <span class="layout-item layout-left">多啦聚财获诺辉投资2000万元战略入股</span>
+                        <span class="layout-item layout-right">2017-05-08</span>
+                    </div>
+                    <div class="layout-between">
+                        <span class="layout-item layout-left">短期投资产品，了解一下</span>
+                        <span class="layout-item layout-right">2017-05-08</span>
+                    </div>
+                </div>
+                <div class="layui-tab-item">
+                    <pre class="layui-code">
+&lt;div class="layout-between"&gt;
+    &lt;span class="layout-item layout-left"&gt;平台品牌战略规划升级，正式更名多啦聚财&lt;/span&gt;
+    &lt;span class="layout-item layout-right"&gt;2017-05-08&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="layout-between"&gt;
+    &lt;span class="layout-item layout-left"&gt;多啦聚财获诺辉投资2000万元战略入股&lt;/span&gt;
+    &lt;span class="layout-item layout-right"&gt;2017-05-08&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="layout-between"&gt;
+    &lt;span class="layout-item layout-left"&gt;短期投资产品，了解一下&lt;/span&gt;
+    &lt;span class="layout-item layout-right"&gt;2017-05-08&lt;/span&gt;
+&lt;/div&gt;
+                    </pre>
+                </div>
+                <div class="layui-tab-item">
+    <pre class="layui-code">
+.layout-between {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #393D49;
+    display: flex;
+    justify-content: space-between;
+    .layout-left {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .layout-right {
+        padding-left: 20px;
+    }
+}
+    </pre>
+                </div>
+                <div class="layui-tab-item">
+                    <p>1.左右分开布局</p>
+                    <p>2.左边长度超出一定后省略号显示</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="layui-bg-green">
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">result</li>
+                <li>html</li>
+                <li>css</li>
+                <li>需求</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <div class="layout-center">
+                        <div>
+                            <p>平台品牌战略规划升级，正式更名多啦聚财</p>
+                            <p>2017-05-08</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-item">
+                    <pre class="layui-code">
+&lt;div class="layout-center"&gt;
+    &lt;div&gt;
+        &lt;p&gt;平台品牌战略规划升级，正式更名多啦聚财&lt;/p&gt;
+        &lt;p&gt;2017-05-08&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </pre>
+                </div>
+                <div class="layui-tab-item">
+                    <pre class="layui-code">
+.layout-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+            </pre>
+                </div>
+                <div class="layui-tab-item">
+                    <p>1.垂直居中布局</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="/static/libs/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/libs/des.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
